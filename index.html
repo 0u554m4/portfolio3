@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,532 +8,540 @@
   <!-- Font Awesome 6 (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-:root {
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --primary: #0b2b4f;
-  --primary-light: #1e4a6f;
-  --accent: #eab308;
-  --text: #0f172a;
-  --text-light: #334155;
-  --border: #e2e8f0;
-  --card-shadow: 0 20px 30px -10px rgba(0,20,40,0.15);
-  --transition: 0.25s ease;
-}
-
-body.dark {
-  --bg: #0b1120;
-  --surface: #1e293b;
-  --primary: #b0c4de;
-  --primary-light: #cbd5e1;
-  --accent: #fbbf24;
-  --text: #f1f5f9;
-  --text-light: #cbd5e1;
-  --border: #334155;
-  --card-shadow: 0 20px 30px -10px #020617;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
-  transition: background-color 0.3s, color 0.2s;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* ===== HEADER / NAV ===== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-.logo span {
-  color: var(--accent);
-}
-
-.nav-links {
-  display: flex;
-  gap: 2.2rem;
-  align-items: center;
-}
-.nav-links a {
-  text-decoration: none;
-  font-weight: 500;
-  color: var(--text-light);
-  transition: color var(--transition);
-}
-.nav-links a:hover {
-  color: var(--accent);
-}
-
-.theme-toggle {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 40px;
-  padding: 0.4rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text);
-  transition: all 0.2s;
-}
-.theme-toggle i {
-  color: var(--accent);
-  font-size: 1rem;
-}
-
-/* ===== HERO ===== */
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2.5rem;
-  padding: 4rem 0 3rem;
-}
-
-.hero-content {
-  flex: 1 1 350px;
-}
-.hero-badge {
-  color: var(--accent);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 0.9rem;
-  margin-bottom: 0.75rem;
-  display: inline-block;
-}
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1.2rem;
-}
-.hero-highlight {
-  color: var(--accent);
-  border-bottom: 3px solid var(--accent);
-}
-.hero-content p {
-  font-size: 1.2rem;
-  color: var(--text-light);
-  max-width: 500px;
-  margin-bottom: 2rem;
-}
-
-.hero-avatar {
-  flex: 0 0 280px;
-  text-align: center;
-}
-.avatar-box {
-  background: linear-gradient(145deg, var(--primary-light), var(--primary));
-  border-radius: 40% 60% 30% 70% / 50% 40% 60% 50%;
-  padding: 1rem;
-  box-shadow: var(--card-shadow);
-}
-.avatar-box i {
-  font-size: 12rem;
-  color: var(--surface);
-  opacity: 0.9;
-}
-
-.btn-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--surface);
-  border: 2px solid var(--primary);
-  padding: 0.7rem 1.8rem;
-  border-radius: 40px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--text);
-  transition: all 0.2s;
-}
-.btn-primary {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-}
-.btn-primary i {
-  color: white;
-}
-.btn:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #0f172a;
-}
-.btn:hover i {
-  color: #0f172a;
-}
-
-/* ===== SECTION ===== */
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 2.5rem 0 2rem;
-  position: relative;
-  display: inline-block;
-}
-.section-title::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 60%;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 4px;
-}
-
-/* ===== SKILLS ===== */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  margin: 2rem 0 1rem;
-}
-.skill-tag {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 0.6rem 1.5rem;
-  border-radius: 60px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
-  transition: transform 0.15s;
-}
-.skill-tag i {
-  color: var(--accent);
-  font-size: 1.2rem;
-}
-.skill-tag:hover {
-  transform: translateY(-3px);
-  border-color: var(--accent);
-}
-
-/* ===== PROJECT CARDS ===== */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2.5rem 0;
-}
-.project-card {
-  background: var(--surface);
-  border-radius: 24px;
-  padding: 1.8rem 1.5rem;
-  box-shadow: var(--card-shadow);
-  border: 1px solid var(--border);
-  transition: all 0.25s;
-}
-.project-card:hover {
-  transform: scale(1.02);
-  border-color: var(--accent);
-}
-.project-icon {
-  font-size: 2.2rem;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0 1.2rem;
-}
-.project-tags span {
-  background: var(--bg);
-  padding: 0.2rem 1rem;
-  border-radius: 30px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--primary-light);
-  border: 1px solid var(--border);
-}
-.card-links {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 1.2rem;
-}
-.card-links a {
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--text-light);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  border-bottom: 2px solid transparent;
-}
-.card-links a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-/* ===== CONTACT ===== */
-.contact-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--surface);
-  border-radius: 40px;
-  padding: 2.5rem 2rem;
-  margin: 3rem 0;
-  border: 1px solid var(--border);
-}
-.contact-text h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.social-icons {
-  display: flex;
-  gap: 2rem;
-}
-.social-icons a {
-  color: var(--text);
-  font-size: 2rem;
-  transition: all 0.2s;
-}
-.social-icons a:hover {
-  color: var(--accent);
-  transform: translateY(-5px);
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 2rem 0 2.5rem;
-  border-top: 1px solid var(--border);
-  color: var(--text-light);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    align-items: start;
-  }
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-  .avatar-box i {
-    font-size: 9rem;
-  }
-}
-
-
-
-
-
-  Ibrahim Mesloug
-
-    Work
-    Skills
-    Contact
-
-
-      Light
-
-
-
-
-
-
-
-     frontend developer
-    crafting interfaces that users love
-    I’m Ibrahim — I build fast, responsive, and accessible web experiences with modern HTML, CSS, and JavaScript.
-
-       GitHub
-       Contact
-
-
-
-
-
-
-
-
-
-
-
-  tech stack & tools
-
-
-
-
-
-
-
-  selected projects
-
-
-
-
-
-
-
-
-    Let’s connect
-    Open to freelance or full‑time opportunities
-
-
-
-
-
-
-
-
-
-
-
-
-  © 2026 Ibrahim Mesloug — built with  for frontend craft
-
-
-
-
-(function() {
-  // ----- data definitions (frontend developer) -----
-  const skills = [
-    { name: 'HTML5', icon: 'fab fa-html5' },
-    { name: 'CSS3', icon: 'fab fa-css3-alt' },
-    { name: 'JavaScript (ES6+)', icon: 'fab fa-js' },
-    { name: 'React', icon: 'fab fa-react' },
-    { name: 'Tailwind', icon: 'fas fa-wind' },
-    { name: 'Git & GitHub', icon: 'fab fa-git-alt' },
-    // { name: 'Figma', icon: 'fab fa-figma' },
-    // { name: 'Vite', icon: 'fas fa-bolt' }
-  ];
-
-  const projects = [
-    // {
-    //   title: 'movieseek · discovery app',
-    //   desc: 'Real‑time movie search using OMDB API, with skeleton loaders and dark mode.',
-    //   tags: ['react', 'fetch', 'CSS modules'],
-    //   icon: 'fas fa-film',
-    //   link: '#',
-    //   code: '#'
-    // },
-    // {
-    //   title: 'dashboard UI kit',
-    //   desc: 'Interactive admin dashboard with charts, drag‑drop widgets and full accessibility.',
-    //   tags: ['chart.js', 'grid', 'localStorage'],
-    //   icon: 'fas fa-chart-pie',
-    //   link: '#',
-    //   code: '#'
-    // },
-    // {
-    //   title: 'weather flow',
-    //   desc: 'Minimal weather PWA with geolocation, service worker and animated icons.',
-    //   tags: ['PWA', 'API', 'CSS vars'],
-    //   icon: 'fas fa-cloud-sun',
-    //   link: '#',
-    //   code: '#'
-    // }
-  ];
-
-  // ----- render skills -----
-  const skillsContainer = document.getElementById('skillsContainer');
-  if (skillsContainer) {
-    skillsContainer.innerHTML = skills.map(skill =>
-
-
-        ${skill.name}
-
-    ).join('');
-  }
-
-  // ----- render projects -----
-  const projectsContainer = document.getElementById('projectsContainer');
-  if (projectsContainer) {
-    projectsContainer.innerHTML = projects.map(p =>
-
-
-        ${p.title}
-        ${p.desc}
-
-          ${p.tags.map(tag => ${tag}).join('')}
-
-
-           demo
-           code
-
-
-    ).join('');
-  }
-
-  // ----- theme toggle (light/dark) with localStorage persistence -----
-  const toggleBtn = document.getElementById('themeToggle');
-  const sunIcon = '';
-  const moonIcon = '';
-
-  function setTheme(theme) {
-    if (theme === 'dark') {
-      document.body.classList.add('dark');
-      toggleBtn.innerHTML = ${moonIcon} Dark;
-    } else {
-      document.body.classList.remove('dark');
-      toggleBtn.innerHTML = ${sunIcon} Light;
+    /* ===== RESET & VARIABLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-    localStorage.setItem('frontendPortfolioTheme', theme);
-  }
 
-  // init theme
-  const savedTheme = localStorage.getItem('frontendPortfolioTheme') || 'light';
-  setTheme(savedTheme);
-
-  toggleBtn.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark');
-    setTheme(isDark ? 'light' : 'dark');
-  });
-
-  // Optional: update theme toggle label if user prefers OS dark mode (first visit)
-  if (!localStorage.getItem('frontendPortfolioTheme')) {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --primary: #0b2b4f;
+      --primary-light: #1e4a6f;
+      --accent: #eab308;
+      --text: #0f172a;
+      --text-light: #334155;
+      --border: #e2e8f0;
+      --card-shadow: 0 20px 30px -10px rgba(0,20,40,0.15);
+      --transition: 0.25s ease;
     }
-  }
-})();
 
+    body.dark {
+      --bg: #0b1120;
+      --surface: #1e293b;
+      --primary: #b0c4de;
+      --primary-light: #cbd5e1;
+      --accent: #fbbf24;
+      --text: #f1f5f9;
+      --text-light: #cbd5e1;
+      --border: #334155;
+      --card-shadow: 0 20px 30px -10px #020617;
+    }
 
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      transition: background-color 0.3s, color 0.2s;
+    }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
-.fas.fa-heart { color: var(--accent); }
-.project-card p { margin: 0.5rem 0; }
-.btn i, .card-links i { margin-right: 0.2rem; }
-/* ensure project tags use light bg */
-.dark .project-tags span { background: #0f172a; color: #e2e8f0; border-color: #3f4a5c; }
-</
+    /* ===== HEADER / NAV ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text-light);
+      transition: color var(--transition);
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .theme-toggle {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 0.4rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .theme-toggle i {
+      color: var(--accent);
+      font-size: 1rem;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+      padding: 4rem 0 3rem;
+    }
+
+    .hero-content {
+      flex: 1 1 350px;
+    }
+    .hero-badge {
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .hero-highlight {
+      color: var(--accent);
+      border-bottom: 3px solid var(--accent);
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      max-width: 500px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-avatar {
+      flex: 0 0 280px;
+      text-align: center;
+    }
+    .avatar-box {
+      background: linear-gradient(145deg, var(--primary-light), var(--primary));
+      border-radius: 40% 60% 30% 70% / 50% 40% 60% 50%;
+      padding: 1rem;
+      box-shadow: var(--card-shadow);
+    }
+    .avatar-box i {
+      font-size: 12rem;
+      color: var(--surface);
+      opacity: 0.9;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 2px solid var(--primary);
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .btn-primary i {
+      color: white;
+    }
+    .btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #0f172a;
+    }
+    .btn:hover i {
+      color: #0f172a;
+    }
+
+    /* ===== SECTION ===== */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 2.5rem 0 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 60%;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 2rem 0 1rem;
+    }
+    .skill-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.6rem 1.5rem;
+      border-radius: 60px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
+      transition: transform 0.15s;
+    }
+    .skill-tag i {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+    .skill-tag:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    /* ===== PROJECT CARDS ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+    .project-card {
+      background: var(--surface);
+      border-radius: 24px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+      transition: all 0.25s;
+    }
+    .project-card:hover {
+      transform: scale(1.02);
+      border-color: var(--accent);
+    }
+    .project-icon {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0 1.2rem;
+    }
+    .project-tags span {
+      background: var(--bg);
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      border: 1px solid var(--border);
+    }
+    .card-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.2rem;
+    }
+    .card-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--text-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-bottom: 2px solid transparent;
+    }
+    .card-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      border-radius: 40px;
+      padding: 2.5rem 2rem;
+      margin: 3rem 0;
+      border: 1px solid var(--border);
+    }
+    .contact-text h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .social-icons {
+      display: flex;
+      gap: 2rem;
+    }
+    .social-icons a {
+      color: var(--text);
+      font-size: 2rem;
+      transition: all 0.2s;
+    }
+    .social-icons a:hover {
+      color: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 2rem 0 2.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-light);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: start;
+      }
+      .hero-content h1 {
+        font-size: 2.4rem;
+      }
+      .avatar-box i {
+        font-size: 9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- navigation -->
+    <nav class="navbar">
+      <div class="logo">Ibrahim <span>Mesloug</span></div>
+      <div class="nav-links">
+        <a href="#">Work</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact</a>
+        <div class="theme-toggle" id="themeToggle">
+          <i class="fas fa-sun"></i>
+          <span>Light</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <header class="hero">
+      <div class="hero-content">
+        <span class="hero-badge"><i class="fas fa-code"></i> frontend developer</span>
+        <h1>crafting <span class="hero-highlight">interfaces</span> that users love</h1>
+        <p>I’m Ibrahim — I build fast, responsive, and accessible web experiences with modern HTML, CSS, and JavaScript.</p>
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="btn"><i class="fas fa-paper-plane"></i> Contact</a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <div class="avatar-box">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- skills section -->
+    <section>
+      <h2 class="section-title">tech stack & tools</h2>
+      <div class="skills-grid" id="skillsContainer">
+        <!-- dynamically loaded via js, but we keep fallback inline -->
+      </div>
+    </section>
+
+    <!-- featured projects -->
+    <section>
+      <h2 class="section-title">selected projects</h2>
+      <div class="projects-grid" id="projectsContainer">
+        <!-- js will inject cards -->
+      </div>
+    </section>
+
+    <!-- contact + social -->
+    <div class="contact-flex">
+      <div class="contact-text">
+        <h2>Let’s connect</h2>
+        <p>Open to freelance or full‑time opportunities</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="CodePen"><i class="fab fa-codepen"></i></a>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Ibrahim Mesloug — built with <i class="fas fa-heart" style="color: var(--accent);"></i> for frontend craft</p>
+    </footer>
+  </div>
+
+  <script>
+    (function() {
+      // ----- data definitions (frontend developer) -----
+      const skills = [
+        { name: 'HTML5', icon: 'fab fa-html5' },
+        { name: 'CSS3', icon: 'fab fa-css3-alt' },
+        { name: 'JavaScript (ES6+)', icon: 'fab fa-js' },
+        { name: 'React', icon: 'fab fa-react' },
+        { name: 'Tailwind', icon: 'fas fa-wind' },
+        { name: 'Git & GitHub', icon: 'fab fa-git-alt' },
+        // { name: 'Figma', icon: 'fab fa-figma' },
+        // { name: 'Vite', icon: 'fas fa-bolt' }
+      ];
+
+      const projects = [
+        // {
+        //   title: 'movieseek · discovery app',
+        //   desc: 'Real‑time movie search using OMDB API, with skeleton loaders and dark mode.',
+        //   tags: ['react', 'fetch', 'CSS modules'],
+        //   icon: 'fas fa-film',
+        //   link: '#',
+        //   code: '#'
+        // },
+        // {
+        //   title: 'dashboard UI kit',
+        //   desc: 'Interactive admin dashboard with charts, drag‑drop widgets and full accessibility.',
+        //   tags: ['chart.js', 'grid', 'localStorage'],
+        //   icon: 'fas fa-chart-pie',
+        //   link: '#',
+        //   code: '#'
+        // },
+        // {
+        //   title: 'weather flow',
+        //   desc: 'Minimal weather PWA with geolocation, service worker and animated icons.',
+        //   tags: ['PWA', 'API', 'CSS vars'],
+        //   icon: 'fas fa-cloud-sun',
+        //   link: '#',
+        //   code: '#'
+        // }
+      ];
+
+      // ----- render skills -----
+      const skillsContainer = document.getElementById('skillsContainer');
+      if (skillsContainer) {
+        skillsContainer.innerHTML = skills.map(skill => `
+          <div class="skill-tag">
+            <i class="${skill.icon}"></i>
+            <span>${skill.name}</span>
+          </div>
+        `).join('');
+      }
+
+      // ----- render projects -----
+      const projectsContainer = document.getElementById('projectsContainer');
+      if (projectsContainer) {
+        projectsContainer.innerHTML = projects.map(p => `
+          <div class="project-card">
+            <div class="project-icon"><i class="${p.icon}"></i></div>
+            <h3>${p.title}</h3>
+            <p style="color: var(--text-light);">${p.desc}</p>
+            <div class="project-tags">
+              ${p.tags.map(tag => `<span>${tag}</span>`).join('')}
+            </div>
+            <div class="card-links">
+              <a href="${p.link}"><i class="fas fa-external-link-alt"></i> demo</a>
+              <a href="${p.code}"><i class="fab fa-github"></i> code</a>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // ----- theme toggle (light/dark) with localStorage persistence -----
+      const toggleBtn = document.getElementById('themeToggle');
+      const sunIcon = '<i class="fas fa-sun"></i>';
+      const moonIcon = '<i class="fas fa-moon"></i>';
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.body.classList.add('dark');
+          toggleBtn.innerHTML = `${moonIcon} <span>Dark</span>`;
+        } else {
+          document.body.classList.remove('dark');
+          toggleBtn.innerHTML = `${sunIcon} <span>Light</span>`;
+        }
+        localStorage.setItem('frontendPortfolioTheme', theme);
+      }
+
+      // init theme
+      const savedTheme = localStorage.getItem('frontendPortfolioTheme') || 'light';
+      setTheme(savedTheme);
+
+      toggleBtn.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark');
+        setTheme(isDark ? 'light' : 'dark');
+      });
+
+      // Optional: update theme toggle label if user prefers OS dark mode (first visit)
+      if (!localStorage.getItem('frontendPortfolioTheme')) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          setTheme('dark');
+        }
+      }
+    })();
+  </script>
+
+  <!-- small style adjustment for footer heart -->
+  <style>
+    .fas.fa-heart { color: var(--accent); }
+    .project-card p { margin: 0.5rem 0; }
+    .btn i, .card-links i { margin-right: 0.2rem; }
+    /* ensure project tags use light bg */
+    .dark .project-tags span { background: #0f172a; color: #e2e8f0; border-color: #3f4a5c; }
+  </style>
 </body>
 </html>
+
